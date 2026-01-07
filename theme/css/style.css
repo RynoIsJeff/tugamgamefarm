@@ -396,7 +396,7 @@ blockquote:before {
   font-family: "Font Awesome 5 Free";
   position: absolute;
   font-size: 28px;
-  color: #E5E5E5;
+  color: #e5e5e5;
   top: 5px;
   left: 5px;
   font-weight: 700;
@@ -481,12 +481,6 @@ ul.list-check li:before {
 a[href^=tel] {
   color: inherit;
   text-decoration: none;
-}
-
-/* Green CTA readability fix */
-.cta-green .action-style-box {
-  /* keep your green background if already set elsewhere; add if needed: */
-  /* background: #2f5a2e; */
 }
 
 .cta-green .call-to-action-text p,
@@ -634,7 +628,7 @@ a[href^=tel] {
 ================================================== */
 .top-bar {
   padding: 8px 0;
-  background: #23282D;
+  background: #23282d;
   position: relative;
 }
 
@@ -2536,7 +2530,7 @@ img.testimonial-thumb {
 
 /*-- Copyright --*/
 .copyright {
-  background: #23282D;
+  background: #23282d;
   color: #f5f8eb;
   padding: 25px 0;
   position: relative;

@@ -2,7 +2,7 @@
 .btn {
   &:active,
   &:focus {
-      box-shadow: none !important;
+    box-shadow: none !important;
   }
 }
 .btn-primary,
@@ -17,7 +17,7 @@
   transition: 350ms;
   font-size: 14px;
   @include tablet {
-      font-size: 13px;
+    font-size: 13px;
   }
 }
 
@@ -41,8 +41,8 @@
   color: #f5f8eb;
   &:active,
   &:focus {
-      color: #f5f8eb;
-      background-color: #111 !important;
+    color: #f5f8eb;
+    background-color: #111 !important;
   }
 }
 

@@ -483,8 +483,6 @@
   }
 }
 
-
-
 /* Service box */
 
 .ts-service-box .ts-service-icon i {
@@ -1292,7 +1290,7 @@ img.testimonial-thumb {
 /*-- Copyright --*/
 
 .copyright {
-  background: #23282D;
+  background: #23282d;
   color: #f5f8eb;
   padding: 25px 0;
   position: relative;
@@ -2227,7 +2225,11 @@ label {
   border-radius: 8px; /* Optional: Makes images look more modern */
 }
 
-$accom-primary: if(global-variable-exists(color-primary), $color-primary, #305d26);
+$accom-primary: if(
+  global-variable-exists(color-primary),
+  $color-primary,
+  #305d26
+);
 
 .accom-card {
   background: #f9f9f9;
@@ -2235,11 +2237,12 @@ $accom-primary: if(global-variable-exists(color-primary), $color-primary, #305d2
   border-left: 4px solid $accom-primary;
   padding: 18px;
   margin-bottom: 24px;
-  transition: box-shadow 200ms ease, transform 200ms ease, border-color 200ms ease;
+  transition: box-shadow 200ms ease, transform 200ms ease,
+    border-color 200ms ease;
 
   &:hover {
     border-color: $accom-primary;
-    box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
     transform: translateY(-2px);
   }
 
@@ -2273,7 +2276,9 @@ $accom-primary: if(global-variable-exists(color-primary), $color-primary, #305d2
 
     .accom-gallery {
       &.slick-thumbs {
-        .slick-slide { padding-right: 8px; }
+        .slick-slide {
+          padding-right: 8px;
+        }
 
         img {
           display: block;
@@ -2319,7 +2324,11 @@ $accom-primary: if(global-variable-exists(color-primary), $color-primary, #305d2
 
 // Accommodation hero styles
 $accom-hero-height: 420px;
-$brand-green: if(global-variable-exists(color-primary), $color-primary, #305d26);
+$brand-green: if(
+  global-variable-exists(color-primary),
+  $color-primary,
+  #305d26
+);
 
 .accom-hero {
   .accom-hero-item {
@@ -2354,7 +2363,7 @@ $brand-green: if(global-variable-exists(color-primary), $color-primary, #305d26)
       .slide-sub-title,
       .slide-title {
         color: #fff;
-        text-shadow: 0 2px 6px rgba(0,0,0,0.35);
+        text-shadow: 0 2px 6px rgba(0, 0, 0, 0.35);
       }
     }
   }
