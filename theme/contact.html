@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+
 <!--
  // WEBSITE: https://themefisher.com
  // TWITTER: https://twitter.com/themefisher
@@ -5,108 +7,6 @@
  // GITHUB: https://github.com/themefisher/
 -->
 
-<style>
-  .banner-carousel-item {
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-    height: 400px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-  }
-
-  .slider-content {
-    width: 100%;
-    padding: 20px;
-  }
-
-  #map {
-    height: 400px;
-    width: 600px;
-    margin: 0 auto; /* Centers it */
-    border-radius: 12px; /* Adds rounded corners */
-    border: 5px solid #305d26; /* Optional: adds a border */
-  }
-
-  .row {
-    padding-top: 20px;
-  }
-
-  /* Hover effect */
-  .ts-service-box-bg {
-    transition: all 0.3s ease-in-out;
-  }
-
-  .ts-service-box-bg:hover {
-    color: #305d26;
-  }
-
-  .ts-service-box-bg a {
-    text-decoration: none;
-    color: inherit;
-  }
-
-  /* Contact Form Container */
-  .contact-form-box {
-    background: #f5f8ebfff;
-    padding: 40px;
-    border-radius: 12px;
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
-    max-width: 700px;
-    margin: 0 auto;
-  }
-
-  /* Contact Form Styling */
-  #contact-form {
-    display: flex;
-    flex-direction: column;
-  }
-
-  #contact-form .form-group {
-    margin-bottom: 20px;
-  }
-
-  #contact-form input,
-  #contact-form textarea {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ddd;
-    border-radius: 6px;
-    font-size: 16px;
-  }
-
-  #contact-form textarea {
-    resize: none;
-  }
-
-  #contact-form button {
-    background: #305d26;
-    color: #f5f8eb;
-    font-size: 18px;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: background 0.3s ease;
-  }
-
-  #contact-form button:hover {
-    background: #5a9442;
-  }
-
-  /* Centered Heading */
-  .column-title {
-    text-align: center;
-    font-size: 28px;
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 20px;
-  }
-</style>
-
-<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -214,7 +114,8 @@
     </div>
   </body>
 </html>
- <!-- Header start -->
+
+<!-- Header start -->
 <header id="header" class="header-one">
   <div class="bg-custom" style="background-color: #f5f8eb;">
     <div class="container">
@@ -274,15 +175,13 @@
                 <div id="navbar-collapse" class="collapse navbar-collapse">
                   <ul class="nav navbar-nav w-100 d-flex justify-content-between">
                     <li class="nav-item"><a class="nav-link" href="./">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="plant-hire.html">Accomodation</a></li>              
-                    <li class="nav-item"><a class="nav-link" href="sand-stone.html">Venue</a></li>
-                    <li class="nav-item"><a class="nav-link" href="Cattle.html">Cattle</a></li>
-                    <li class="nav-item"><a class="nav-link" href="Hunting.html">Hunting</a></li>
+                    <li class="nav-item"><a class="nav-link" href="accommodation.html">Accommodation</a></li>              
+                    <li class="nav-item"><a class="nav-link" href="venue.html">Venue</a></li>
+                    <li class="nav-item"><a class="nav-link" href="cattle.html">Cattle</a></li>
+                    <li class="nav-item"><a class="nav-link" href="hunting.html">Hunting</a></li>
                     <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
                     <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
                   </ul>
-                </div>
-                    </ul>
                 </div>
               </nav>
           </div>
@@ -297,167 +196,249 @@
 </header>
 <!--/ Header end -->
 
-<section id="main-container" class="main-container">
-  <div
-    class="banner-carousel-item"
-    style="background-image: url(images/slider-main/bg8.png)"
-  >
-    <div class="slider-content">
+<!-- Contact Banner Carousel -->
+<div class="banner-carousel banner-carousel-1 mb-0">
+
+  <!-- Slide 1 -->
+  <div class="banner-carousel-item" style="background-image: url(images/contact/banner1.jpg)">
+    <div class="slider-content text-center">
       <div class="container h-100">
         <div class="row align-items-center h-100">
-          <div class="col-md-12 text-center">
-            <h3 class="slide-sub-title" data-animation-in="slideInRight">
-              Contact Us
-            </h3>
-            <h2 class="slide-title" data-animation-in="slideInLeft">
-              Get in touch for advice or a quotation.
-            </h2>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!--/ Title row end -->
-
-  <div class="row">
-    <div class="col-md-4">
-      <a
-        href="https://www.google.com/maps/search/?api=1&query=-33.699217014246116,19.023014484071158"
-        target="_blank"
-      >
-        <div class="ts-service-box-bg text-center h-100">
-          <span class="ts-service-icon icon-round">
-            <i class="fas fa-map-marker-alt mr-0"></i>
-          </span>
-          <div class="ts-service-box-content">
-            <h4>Visit Our Office</h4>
-            <p>
-              Tugam Venue & Game Farm office, De hoop steen road , Paarl, Western
-              Cape, South Africa
+          <div class="col-md-12">
+            <h3 class="slide-sub-title">Contact Us</h3>
+            <h2 class="slide-title">Book • Enquire • Visit</h2>
+            <p class="slider-description lead">
+              Reach out for venue hire, accommodation, hunting or general enquiries.
+            </p>
+            <p class="mt-3">
+              <a href="#contact-form" class="slider btn btn-primary">Send a Message</a>
+              <a href="tel:+27664952114" class="slider btn btn-primary">Call Now</a>
             </p>
           </div>
         </div>
-      </a>
-    </div>
-    <!-- Col 1 end -->
-
-    <div class="col-md-4">
-      <a href="mailto:bookings@tugamgamefarm.co.za">
-        <div class="ts-service-box-bg text-center h-100">
-          <span class="ts-service-icon icon-round">
-            <i class="fa fa-envelope mr-0"></i>
-          </span>
-          <div class="ts-service-box-content">
-            <h4>Email Us</h4>
-            <p>bookings@tugamgamefarm.co.za</p>
-          </div>
-        </div>
-      </a>
-    </div>
-    <!-- Col 2 end -->
-
-    <div class="col-md-4">
-      <a href="tel:+27218682169">
-        <div class="ts-service-box-bg text-center h-100">
-          <span class="ts-service-icon icon-round">
-            <i class="fa fa-phone-square mr-0"></i>
-          </span>
-          <div class="ts-service-box-content">
-            <h4>Call Us</h4>
-            <p>+27 66 495 2114</p>
-          </div>
-        </div>
-      </a>
-    </div>
-    <!-- Col 3 end -->
-  </div>
-  <!-- 1st row end -->
-
-  <div class="gap-60"></div>
-
-  <div id="map"></div>
-
-  <div class="gap-40"></div>
-
-  <div class="row">
-    <div class="col-md-12">
-      <div class="contact-form-box">
-        <h3 class="column-title">We'd love to hear from you!</h3>
-        <form
-          id="contact-form"
-          action="https://formspree.io/f/xrbekklr"
-          method="POST"
-        >
-          <div class="error-container"></div>
-          <div class="row">
-            <div class="col-md-4">
-              <div class="form-group">
-                <label>Name</label>
-                <input class="form-control" name="name" type="text" required />
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="form-group">
-                <label>Email</label>
-                <input
-                  class="form-control"
-                  name="email"
-                  type="email"
-                  required
-                />
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="form-group">
-                <label>Subject</label>
-                <input
-                  class="form-control"
-                  name="subject"
-                  type="text"
-                  required
-                />
-              </div>
-            </div>
-          </div>
-          <div class="form-group">
-            <label>Message</label>
-            <textarea
-              class="form-control"
-              name="message"
-              rows="6"
-              required
-            ></textarea>
-          </div>
-          <div class="text-center">
-            <button class="btn btn-primary solid blank" type="submit">
-              Send Message
-            </button>
-          </div>
-        </form>
       </div>
     </div>
   </div>
-  <!-- Content row -->
+
+  <!-- Slide 2 -->
+  <div class="banner-carousel-item" style="background-image: url(images/contact/banner2.jpg)">
+    <div class="slider-content text-left">
+      <div class="container h-100">
+        <div class="row align-items-center h-100">
+          <div class="col-md-12">
+            <h3 class="slide-sub-title">Bookings & Enquiries</h3>
+            <h2 class="slide-title">We’re Happy to Help</h2>
+            <p class="mt-3">
+              <a href="#contact-details" class="slider btn btn-primary">View Details</a>
+              <a href="#map" class="slider btn btn-primary">Find Us</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+<!-- /Contact Banner Carousel -->
+
+<!-- CTA band -->
+<section class="call-to-action-box no-padding">
+  <div class="container">
+    <div class="action-style-box">
+      <div class="row align-items-center">
+        <div class="col-md-8 text-center text-md-left">
+          <div class="call-to-action-text">
+            <h3 class="action-title">Ready to book or ask a question?</h3>
+          </div>
+        </div>
+        <div class="col-md-4 text-center text-md-right mt-3 mt-md-0">
+          <a class="btn btn-dark" href="tel:+27664952114">Call: 066 495 2114</a>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
-<!-- Main container end -->
 
-<script>
-  window.onload = function () {
-    var location = [-33.70017361290964, 19.02288771883];
-    var map = L.map("map").setView(location, 15);
+<main class="main-container section-padding">
 
-    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-      attribution:
-        '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-    }).addTo(map);
+  <!-- Contact Details -->
+  <div class="container" id="contact-details">
+    <div class="row mb-4">
+      <div class="col-12">
+        <h1 class="into-title">Contact Us</h1>
+        <h3 class="into-sub-title">Let’s Plan Your Tugam Experience</h3>
+        <p class="mb-0">
+          Whether you’re booking accommodation, hiring the venue, planning a hunt, or just need more information —
+          get in touch and we’ll assist you.
+        </p>
+      </div>
+    </div>
 
-    L.marker(location).addTo(map).bindPopup("Tugam Venue & Game Farm").openPopup();
+    <div class="row">
+      <!-- Call -->
+      <div class="col-md-6 col-lg-3 mb-4">
+        <div class="accom-facilities card h-100 text-center">
+          <div class="card-body">
+            <div class="service-icon">
+              <img loading="lazy" src="images/icon-image/service-icon2.png" alt="Phone Icon">
+            </div>
+            <h3 class="column-title-small">Call / WhatsApp</h3>
+            <p class="mb-3">Bookings & enquiries</p>
+            <a class="btn btn-primary btn-sm" href="tel:+27664952114">066 495 2114</a>
+          </div>
+        </div>
+      </div>
 
-    setTimeout(() => {
-      map.invalidateSize();
-    }, 500);
-  };
-</script>
+      <!-- Email (placeholder) -->
+      <div class="col-md-6 col-lg-3 mb-4">
+        <div class="accom-facilities card h-100 text-center">
+          <div class="card-body">
+            <div class="service-icon">
+              <img loading="lazy" src="images/icon-image/service-icon1.png" alt="Email Icon">
+            </div>
+            <h3 class="column-title-small">Email</h3>
+            <p class="mb-3">
+              Prefer email? Send us a message below or add your email address here.
+            </p>
+            <!-- Replace with real email when you have it -->
+            <span class="small text-muted">email@example.com</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hours -->
+      <div class="col-md-6 col-lg-3 mb-4">
+        <div class="accom-facilities card h-100 text-center">
+          <div class="card-body">
+            <div class="service-icon">
+              <img loading="lazy" src="images/icon-image/service-icon4.png" alt="Hours Icon">
+            </div>
+            <h3 class="column-title-small">Operating Hours</h3>
+            <p class="mb-0">
+              We respond as quickly as possible. If we miss you, we’ll call you back.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Location -->
+      <div class="col-md-6 col-lg-3 mb-4">
+        <div class="accom-facilities card h-100 text-center">
+          <div class="card-body">
+            <div class="service-icon">
+              <img loading="lazy" src="images/icon-image/service-icon3.png" alt="Location Icon">
+            </div>
+            <h3 class="column-title-small">Location</h3>
+            <p class="mb-0">
+              Tugam Cattle & Game Farm is located just outside Pongola.
+              Use the map below to get directions.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div><!-- /container -->
+
+  <!-- Form + Map -->
+  <div class="container mt-5">
+    <div class="row">
+
+      <!-- Contact Form -->
+      <div class="col-lg-6" id="contact-form">
+        <h3 class="section-title mb-2">Send Us a Message</h3>
+        <p class="mb-4">
+          Fill in the form and we’ll get back to you with availability and details.
+        </p>
+
+        <form id="contact-form-main" class="contact-form" method="post" action="#">
+          <div class="row">
+            <div class="col-md-6 mb-3">
+              <input class="form-control" type="text" name="name" placeholder="Full Name" required>
+            </div>
+            <div class="col-md-6 mb-3">
+              <input class="form-control" type="tel" name="phone" placeholder="Phone Number" required>
+            </div>
+            <div class="col-md-12 mb-3">
+              <input class="form-control" type="email" name="email" placeholder="Email Address">
+            </div>
+
+            <div class="col-md-12 mb-3">
+              <select class="form-control" name="enquiry_type" required>
+                <option value="" disabled selected>What is your enquiry about?</option>
+                <option value="venue">Venue Hire (Khangela Lodge)</option>
+                <option value="accommodation">Accommodation</option>
+                <option value="hunting">Hunting</option>
+                <option value="cattle">Ankole Cattle</option>
+                <option value="general">General Enquiry</option>
+              </select>
+            </div>
+
+            <div class="col-md-12 mb-3">
+              <textarea class="form-control" name="message" rows="6" placeholder="Tell us what you need (dates, number of guests, event type, etc.)" required></textarea>
+            </div>
+
+            <div class="col-md-12 d-flex align-items-center" style="gap:10px;">
+              <button class="btn btn-primary" type="submit">Send Message</button>
+              <a class="btn btn-dark" href="tel:+27664952114">Call: 066 495 2114</a>
+            </div>
+          </div>
+        </form>
+
+        <div class="alert alert-light border mt-4 mb-0">
+          <strong>Tip:</strong> For faster assistance, include your preferred dates and the number of guests.
+        </div>
+      </div>
+
+      <!-- Map -->
+      <div class="col-lg-6 mt-5 mt-lg-0" id="map">
+        <h3 class="section-title mb-2">Find Us</h3>
+        <p class="mb-4">
+          Use the map to get directions. (We can add the exact pinned location once you confirm the address or coordinates.)
+        </p>
+
+        <div class="accom-facilities card">
+          <div class="card-body p-0">
+            <!-- Replace the iframe src with your exact Google Maps share link when ready -->
+            <iframe
+              title="Tugam Location Map"
+              src=""
+              width="100%"
+              height="360"
+              style="border:0;"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+
+            <div class="p-3">
+              <a class="btn btn-dark btn-sm" href="tel:+27664952114">Need help with directions? Call us</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div><!-- /container -->
+
+  <!-- Bottom CTA -->
+  <section class="call-to-action-box no-padding mt-5 cta-green">
+    <div class="container">
+      <div class="action-style-box">
+        <div class="row align-items-center">
+          <div class="col-md-8 text-center text-md-left">
+            <div class="call-to-action-text">
+              <h3 class="action-title mb-1">Let’s get your booking started</h3>
+              <p class="mb-0">Bookings & enquiries: <strong><a href="tel:+27664952114">066 495 2114</a></strong></p>
+            </div>
+          </div>
+          <div class="col-md-4 text-center text-md-right mt-3 mt-md-0">
+            <a class="btn btn-dark" href="accommodation.html">View Accommodation</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
 
 <footer id="footer" class="footer">
   <div class="footer-main">
