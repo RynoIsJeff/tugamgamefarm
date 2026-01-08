@@ -79,7 +79,7 @@
   <div class="container" id="contact-details">
     <div class="row mb-4">
       <div class="col-12">
-        <h1 class="into-title">Contact Us</h1>
+        <h1 class="into-title">Get in Touch</h1>
         <h3 class="into-sub-title">Let’s Plan Your Tugam Experience</h3>
         <p class="mb-0">
           Whether you’re booking accommodation, hiring the venue, planning a
@@ -90,7 +90,7 @@
     </div>
 
     <div class="row">
-      <!-- Call -->
+      <!-- Call / WhatsApp -->
       <div class="col-md-6 col-lg-3 mb-4">
         <div class="accom-facilities card h-100 text-center">
           <div class="card-body">
@@ -103,14 +103,27 @@
             </div>
             <h3 class="column-title-small">Call / WhatsApp</h3>
             <p class="mb-3">Bookings & enquiries</p>
-            <a class="btn btn-primary btn-sm" href="tel:+27664952114"
-              >066 495 2114</a
+
+            <div
+              class="d-flex justify-content-center"
+              style="gap: 10px; flex-wrap: wrap"
             >
+              <a class="btn btn-primary btn-sm" href="tel:+27664952114">Call</a>
+              <a
+                class="btn btn-dark btn-sm"
+                href="https://wa.me/27664952114"
+                target="_blank"
+                rel="noopener"
+                >WhatsApp</a
+              >
+            </div>
+
+            <p class="mt-2 mb-0"><strong>066 495 2114</strong></p>
           </div>
         </div>
       </div>
 
-      <!-- Email (placeholder) -->
+      <!-- Email -->
       <div class="col-md-6 col-lg-3 mb-4">
         <div class="accom-facilities card h-100 text-center">
           <div class="card-body">
@@ -122,12 +135,12 @@
               />
             </div>
             <h3 class="column-title-small">Email</h3>
-            <p class="mb-3">
-              Prefer email? Send us a message below or add your email address
-              here.
-            </p>
-            <!-- Replace with real email when you have it -->
-            <span class="small text-muted">email@example.com</span>
+            <p class="mb-3">Prefer email? Send us a message or email us directly.</p>
+            <a
+              class="btn btn-primary btn-sm"
+              href="mailto:bookings@tugamgamefarm.co.za"
+              >bookings@tugamgamefarm.co.za</a
+            >
           </div>
         </div>
       </div>
@@ -175,6 +188,22 @@
   </div>
   <!-- /container -->
 
+  <!-- Popup alerts (success / error) -->
+  <div
+    id="form-alert"
+    class="alert"
+    role="alert"
+    style="
+      display: none;
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 9999;
+      max-width: 360px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    "
+  ></div>
+
   <!-- Form + Map -->
   <div class="container mt-5">
     <div class="row">
@@ -186,12 +215,20 @@
           details.
         </p>
 
+        <!-- Netlify AJAX form (no redirect) -->
         <form
           id="contact-form-main"
           class="contact-form"
-          method="post"
-          action="#"
+          name="contact"
+          method="POST"
+          data-netlify="true"
+          netlify-honeypot="bot-field"
         >
+          <input type="hidden" name="form-name" value="contact" />
+          <p class="d-none">
+            <label>Don’t fill this out: <input name="bot-field" /></label>
+          </p>
+
           <div class="row">
             <div class="col-md-6 mb-3">
               <input
@@ -234,6 +271,15 @@
             </div>
 
             <div class="col-md-12 mb-3">
+              <input
+                class="form-control"
+                type="text"
+                name="subject"
+                placeholder="Subject (optional)"
+              />
+            </div>
+
+            <div class="col-md-12 mb-3">
               <textarea
                 class="form-control"
                 name="message"
@@ -244,11 +290,18 @@
             </div>
 
             <div class="col-md-12 d-flex align-items-center" style="gap: 10px">
-              <button class="btn btn-primary" type="submit">
+              <button class="btn btn-primary" type="submit" id="contact-submit">
                 Send Message
               </button>
               <a class="btn btn-dark" href="tel:+27664952114"
                 >Call: 066 495 2114</a
+              >
+              <a
+                class="btn btn-dark"
+                href="https://wa.me/27664952114"
+                target="_blank"
+                rel="noopener"
+                >WhatsApp</a
               >
             </div>
           </div>
@@ -264,19 +317,18 @@
       <div class="col-lg-6 mt-5 mt-lg-0" id="map">
         <h3 class="section-title mb-2">Find Us</h3>
         <p class="mb-4">
-          Use the map to get directions. (We can add the exact pinned location
-          once you confirm the address or coordinates.)
+          Use the map below for directions to Tugam Cattle & Game Farm.
         </p>
 
         <div class="accom-facilities card">
           <div class="card-body p-0">
-            <!-- Replace the iframe src with your exact Google Maps share link when ready -->
             <iframe
               title="Tugam Location Map"
-              src=""
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3536.868350116044!2d31.668060576663407!3d-27.566595976263528!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ee5578cb6d9653f%3A0x2ba0911ed424dab1!2sTugam%20Game%20Farm!5e0!3m2!1sen!2sza!4v1767798002523!5m2!1sen!2sza"
               width="100%"
               height="360"
               style="border: 0"
+              allowfullscreen=""
               loading="lazy"
               referrerpolicy="no-referrer-when-downgrade"
             >
@@ -305,6 +357,12 @@
               <p class="mb-0">
                 Bookings & enquiries:
                 <strong><a href="tel:+27664952114">066 495 2114</a></strong>
+                •
+                <strong>
+                  <a href="mailto:bookings@tugamgamefarm.co.za"
+                    >bookings@tugamgamefarm.co.za</a
+                  >
+                </strong>
               </p>
             </div>
           </div>
@@ -318,5 +376,73 @@
     </div>
   </section>
 </main>
+
+<script>
+  // Netlify AJAX submit (no redirect) + popup alert
+  (function () {
+    var form = document.getElementById("contact-form-main");
+    var alertBox = document.getElementById("form-alert");
+    var submitBtn = document.getElementById("contact-submit");
+
+    function showAlert(type, message) {
+      // type: "success" | "danger"
+      alertBox.className = "alert alert-" + type;
+      alertBox.textContent = message;
+      alertBox.style.display = "block";
+
+      // auto-hide
+      setTimeout(function () {
+        alertBox.style.display = "none";
+      }, 6000);
+    }
+
+    function encode(data) {
+      return Object.keys(data)
+        .map(function (key) {
+          return (
+            encodeURIComponent(key) + "=" + encodeURIComponent(data[key] || "")
+          );
+        })
+        .join("&");
+    }
+
+    if (!form) return;
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      // Disable button to prevent double submits
+      if (submitBtn) submitBtn.disabled = true;
+
+      var formData = new FormData(form);
+      var data = {};
+      formData.forEach(function (value, key) {
+        data[key] = value;
+      });
+
+      fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: encode(data),
+      })
+        .then(function () {
+          form.reset();
+          showAlert(
+            "success",
+            "✅ Message sent! Thank you — we’ll get back to you shortly."
+          );
+        })
+        .catch(function () {
+          showAlert(
+            "danger",
+            "❌ Something went wrong. Please call or WhatsApp us on 066 495 2114."
+          );
+        })
+        .finally(function () {
+          if (submitBtn) submitBtn.disabled = false;
+        });
+    });
+  })();
+</script>
 
 @@include('footer.htm')
