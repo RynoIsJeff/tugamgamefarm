@@ -545,6 +545,104 @@ a[href^=tel] {
   transform: translateY(-3px);
 }
 
+/* =========================
+   CONTACT PAGE FIXES
+   ========================= */
+/* Fix button text color + make buttons consistent */
+.contact-page .btn,
+.contact-page .btn:link,
+.contact-page .btn:visited {
+  color: #f5f8eb !important;
+}
+
+/* Primary = Tugam green */
+.contact-page .btn-primary {
+  background: #305d26 !important;
+  border-color: #305d26 !important;
+}
+
+.contact-page .btn-primary:hover {
+  background: #24481d !important;
+  border-color: #24481d !important;
+}
+
+/* Dark = charcoal */
+.contact-page .btn-dark {
+  background: #23282d !important;
+  border-color: #23282d !important;
+}
+
+.contact-page .btn-dark:hover {
+  background: #111417 !important;
+  border-color: #111417 !important;
+}
+
+/* Fix the top green CTA button readability too */
+.call-to-action-box .btn-dark {
+  color: #f5f8eb !important;
+}
+
+/* Contact cards: alignment + spacing */
+.contact-page .accom-facilities.card .card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 12px;
+}
+
+.contact-page .accom-facilities.card .service-icon {
+  width: 84px;
+  height: 84px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+
+.contact-page .accom-facilities.card .service-icon img {
+  width: 56px;
+  height: 56px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  display: block;
+}
+
+/* Keep card text tidy */
+.contact-page .accom-facilities.card p {
+  margin: 0;
+}
+
+/* Fix long email "button" overflow */
+.contact-page .contact-email {
+  display: inline-block;
+  max-width: 100%;
+  padding: 12px 14px;
+  border-radius: 3px;
+  background: #305d26;
+  color: #f5f8eb !important;
+  font-weight: 700;
+  text-transform: none;
+  font-size: 13px;
+  line-height: 1.2;
+  word-break: break-word;
+  text-align: center;
+}
+
+/* Make the form buttons line up nicely */
+.contact-page #contact-form .btn {
+  min-width: 180px;
+}
+
+@media (max-width: 991px) {
+  .contact-page #contact-form .col-md-12.d-flex {
+    flex-direction: column;
+    align-items: stretch !important;
+  }
+  .contact-page #contact-form .btn {
+    width: 100%;
+  }
+}
 /* Button */
 .btn:active, .btn:focus {
   box-shadow: none !important;

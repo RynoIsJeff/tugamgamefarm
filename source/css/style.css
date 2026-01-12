@@ -389,7 +389,7 @@ blockquote:before {
   font-family: "Font Awesome 5 Free";
   position: absolute;
   font-size: 28px;
-  color: #E5E5E5;
+  color: #e5e5e5;
   top: 5px;
   left: 5px;
   font-weight: 700;
@@ -471,13 +471,14 @@ ul.list-check li:before {
   background: #f5f5f5 url(../images/crossword.png);
 }
 
-a[href^=tel] {
+a[href^="tel"] {
   color: inherit;
   text-decoration: none;
 }
 
 /* Button */
-.btn:active, .btn:focus {
+.btn:active,
+.btn:focus {
   box-shadow: none !important;
 }
 
@@ -519,7 +520,8 @@ a[href^=tel] {
   background: #111;
   color: #f5f8eb;
 }
-.btn-primary:hover:active, .btn-primary:hover:focus,
+.btn-primary:hover:active,
+.btn-primary:hover:focus,
 .btn-dark:hover:active,
 .btn-dark:hover:focus,
 .btn-white.btn-primary:hover:active,
@@ -550,7 +552,7 @@ a[href^=tel] {
   background: #f5f5f5 url(../images/crossword.png);
 }
 
-a[href^=tel] {
+a[href^="tel"] {
   color: inherit;
   text-decoration: none;
 }
@@ -559,7 +561,7 @@ a[href^=tel] {
 ================================================== */
 .top-bar {
   padding: 8px 0;
-  background: #23282D;
+  background: #23282d;
   position: relative;
 }
 
@@ -568,7 +570,7 @@ ul.top-info {
   list-style: none;
   margin: 0;
   padding: 0;
-  color: #f5f8eb
+  color: #f5f8eb;
 }
 
 ul.top-info li {
@@ -608,7 +610,7 @@ ul.top-info li p.info-text {
 .top-social ul li {
   display: inline-block;
   padding: 0;
-  color: #f5f8eb
+  color: #f5f8eb;
 }
 .top-social ul li a {
   color: #f5f8eb;
@@ -638,9 +640,6 @@ ul.top-info li p.info-text {
 .top-bar-border ul.top-info li i {
   color: #305d26;
 }
-
-
-
 
 /* Header area
 ================================================== */
@@ -1965,13 +1964,24 @@ ul.navbar-nav > li.header-get-a-quote:hover > a:after {
   transform: perspective(1px) translate3d(0, 15px, 0);
   transition: all 400ms;
 }
-.shuffle-item .project-img-container .project-item-info-content .project-item-title {
+.shuffle-item
+  .project-img-container
+  .project-item-info-content
+  .project-item-title {
   font-size: 20px;
 }
-.shuffle-item .project-img-container .project-item-info-content .project-item-title a {
+.shuffle-item
+  .project-img-container
+  .project-item-info-content
+  .project-item-title
+  a {
   color: #f5f8eb;
 }
-.shuffle-item .project-img-container .project-item-info-content .project-item-title a:hover {
+.shuffle-item
+  .project-img-container
+  .project-item-info-content
+  .project-item-title
+  a:hover {
   color: #305d26;
 }
 .shuffle-item .project-img-container .project-item-info-content .project-cat {
@@ -2106,10 +2116,10 @@ ul.navbar-nav > li.header-get-a-quote:hover > a:after {
   color: #f5f8eb;
   transition: 0.3s;
 }
-.accordion-group .card-header .btn[aria-expanded=true] {
+.accordion-group .card-header .btn[aria-expanded="true"] {
   color: #305d26;
 }
-.accordion-group .card-header .btn[aria-expanded=true]::before {
+.accordion-group .card-header .btn[aria-expanded="true"]::before {
   content: "\f106";
   background-color: #305d26;
 }
@@ -2460,7 +2470,7 @@ img.testimonial-thumb {
 
 .footer-widget ul.list-arrow li:hover a,
 .footer-widget ul.list-arrow li:hover {
-  color: #000; 
+  color: #000;
 }
 
 .working-hours {
@@ -2471,10 +2481,9 @@ img.testimonial-thumb {
   float: right;
 }
 
-
 /*-- Copyright --*/
 .copyright {
-  background: #23282D;
+  background: #23282d;
   color: #111;
   padding: 25px 0;
   position: relative;
@@ -3305,7 +3314,8 @@ label {
   transition: 400ms;
   display: block;
 }
-.sidebar ul.service-menu li.active a, .sidebar ul.service-menu li:hover a {
+.sidebar ul.service-menu li.active a,
+.sidebar ul.service-menu li:hover a {
   background: #305d26;
   color: #f5f8eb;
   cursor: pointer;
@@ -3395,7 +3405,7 @@ label {
   width: 100%; /* Make the image responsive */
   max-height: 250px; /* Set a max height to maintain uniformity */
   -o-object-fit: cover;
-     object-fit: cover; /* Ensures the image covers the container without distortion */
+  object-fit: cover; /* Ensures the image covers the container without distortion */
   border-radius: 8px; /* Optional: Makes images look more modern */
 }
 /*# sourceMappingURL=style.css.map */
@@ -3407,11 +3417,12 @@ label {
   border-left: 4px solid #305d26;
   padding: 18px;
   margin-bottom: 24px;
-  transition: box-shadow 200ms ease, transform 200ms ease, border-color 200ms ease;
+  transition: box-shadow 200ms ease, transform 200ms ease,
+    border-color 200ms ease;
 }
 .accom-card:hover {
   border-color: #305d26;
-  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
   transform: translateY(-2px);
 }
 
@@ -3420,7 +3431,7 @@ label {
   height: 100%;
   max-height: 320px;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   border-radius: 6px;
 }
 
@@ -3454,7 +3465,7 @@ label {
   width: 100%;
   height: 90px;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   border-radius: 4px;
   border: 2px solid transparent;
   transition: transform 200ms ease, border-color 200ms ease;
@@ -3499,7 +3510,12 @@ label {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(0,0,0,0.25) 0%, rgba(0,0,0,0.15) 50%, rgba(0,0,0,0.25) 100%);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.25) 0%,
+    rgba(0, 0, 0, 0.15) 50%,
+    rgba(0, 0, 0, 0.25) 100%
+  );
   pointer-events: none;
 }
 .accom-hero .accom-hero-item .slider-content {
@@ -3510,14 +3526,18 @@ label {
 .accom-hero .accom-hero-item .slider-content .slide-sub-title,
 .accom-hero .accom-hero-item .slider-content .slide-title {
   color: #fff;
-  text-shadow: 0 2px 6px rgba(0,0,0,0.35);
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.35);
 }
 
 @media (max-width: 991.98px) {
-  .accom-hero .accom-hero-item { min-height: 360px; }
+  .accom-hero .accom-hero-item {
+    min-height: 360px;
+  }
 }
 @media (max-width: 575.98px) {
-  .accom-hero .accom-hero-item { min-height: 300px; }
+  .accom-hero .accom-hero-item {
+    min-height: 300px;
+  }
 }
 
 /* Green CTA readability fix */
@@ -3580,14 +3600,114 @@ label {
 #explore p {
   margin: 0;
   max-width: 260px;
-  min-height: 60px;   /* keeps cards equal */
+  min-height: 60px; /* keeps cards equal */
 }
 
 /* Make the whole card feel clickable */
 #explore a.accom-facilities.card {
-  transition: transform .15s ease, box-shadow .15s ease;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
 
 #explore a.accom-facilities.card:hover {
   transform: translateY(-3px);
+}
+
+/* =========================
+   CONTACT PAGE FIXES
+   ========================= */
+
+/* Fix button text color + make buttons consistent */
+.contact-page .btn,
+.contact-page .btn:link,
+.contact-page .btn:visited {
+  color: #f5f8eb !important;
+}
+
+/* Primary = Tugam green */
+.contact-page .btn-primary {
+  background: #305d26 !important;
+  border-color: #305d26 !important;
+}
+
+.contact-page .btn-primary:hover {
+  background: #24481d !important;
+  border-color: #24481d !important;
+}
+
+/* Dark = charcoal */
+.contact-page .btn-dark {
+  background: #23282d !important;
+  border-color: #23282d !important;
+}
+
+.contact-page .btn-dark:hover {
+  background: #111417 !important;
+  border-color: #111417 !important;
+}
+
+/* Fix the top green CTA button readability too */
+.call-to-action-box .btn-dark {
+  color: #f5f8eb !important;
+}
+
+/* Contact cards: alignment + spacing */
+.contact-page .accom-facilities.card .card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 12px;
+}
+
+.contact-page .accom-facilities.card .service-icon {
+  width: 84px;
+  height: 84px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+
+.contact-page .accom-facilities.card .service-icon img {
+  width: 56px;
+  height: 56px;
+  object-fit: contain;
+  display: block;
+}
+
+/* Keep card text tidy */
+.contact-page .accom-facilities.card p {
+  margin: 0;
+}
+
+/* Fix long email "button" overflow */
+.contact-page .contact-email {
+  display: inline-block;
+  max-width: 100%;
+  padding: 12px 14px;
+  border-radius: 3px;
+  background: #305d26;
+  color: #f5f8eb !important;
+  font-weight: 700;
+  text-transform: none;
+  font-size: 13px;
+  line-height: 1.2;
+  word-break: break-word;
+  text-align: center;
+}
+
+/* Make the form buttons line up nicely */
+.contact-page #contact-form .btn {
+  min-width: 180px;
+}
+
+@media (max-width: 991px) {
+  .contact-page #contact-form .col-md-12.d-flex {
+    flex-direction: column;
+    align-items: stretch !important;
+  }
+
+  .contact-page #contact-form .btn {
+    width: 100%;
+  }
 }
