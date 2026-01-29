@@ -215,20 +215,7 @@
           details.
         </p>
 
-        <!-- Netlify AJAX form (no redirect) -->
-        <form
-          id="contact-form-main"
-          class="contact-form"
-          name="contact"
-          method="POST"
-          data-netlify="true"
-          netlify-honeypot="bot-field"
-        >
-          <input type="hidden" name="form-name" value="contact" />
-          <p class="d-none">
-            <label>Don’t fill this out: <input name="bot-field" /></label>
-          </p>
-
+        <form id="contact-form-main" class="contact-form" method="POST">
           <div class="row">
             <div class="col-md-6 mb-3">
               <input
@@ -378,7 +365,6 @@
 </main>
 
 <script>
-  // Netlify AJAX submit (no redirect) + popup alert
   (function () {
     var form = document.getElementById("contact-form-main");
     var alertBox = document.getElementById("form-alert");
@@ -386,24 +372,14 @@
 
     function showAlert(type, message) {
       // type: "success" | "danger"
+      if (!alertBox) return;
       alertBox.className = "alert alert-" + type;
       alertBox.textContent = message;
       alertBox.style.display = "block";
 
-      // auto-hide
       setTimeout(function () {
         alertBox.style.display = "none";
       }, 6000);
-    }
-
-    function encode(data) {
-      return Object.keys(data)
-        .map(function (key) {
-          return (
-            encodeURIComponent(key) + "=" + encodeURIComponent(data[key] || "")
-          );
-        })
-        .join("&");
     }
 
     if (!form) return;
@@ -411,7 +387,6 @@
     form.addEventListener("submit", function (e) {
       e.preventDefault();
 
-      // Disable button to prevent double submits
       if (submitBtn) submitBtn.disabled = true;
 
       var formData = new FormData(form);
@@ -420,22 +395,26 @@
         data[key] = value;
       });
 
-      fetch("/", {
+      fetch("/api/contact", {
         method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: encode(data),
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
       })
+        .then(function (res) {
+          if (!res.ok) throw new Error("Request failed");
+          return res.json();
+        })
         .then(function () {
           form.reset();
           showAlert(
             "success",
-            "✅ Message sent! Thank you — we’ll get back to you shortly."
+            "✅ Message sent! Thank you — we’ll get back to you shortly.",
           );
         })
         .catch(function () {
           showAlert(
             "danger",
-            "❌ Something went wrong. Please call or WhatsApp us on 066 495 2114."
+            "❌ Something went wrong. Please call or WhatsApp us on 066 495 2114.",
           );
         })
         .finally(function () {
