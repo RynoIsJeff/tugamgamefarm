@@ -14,7 +14,8 @@
     "gulp-autoprefixer": "^8.0.0",
     "gulp-header-comment": "^0.10.0",
     "gulp-rimraf": "^1.0.0",
-    "gulp-sourcemaps": "^3.0.0"
+    "gulp-sourcemaps": "^3.0.0",
+    "nodemailer": "^7.0.13"
   },
   "devDependencies": {
     "gulp-file-include": "^2.3.0",
