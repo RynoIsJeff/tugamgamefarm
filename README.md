@@ -48,3 +48,28 @@ Website for **Tugam Cattle & Game Farm**, Pongola, KwaZulu-Natal — accommodati
 ## Deploy
 
 Pushes to the connected GitHub repo trigger an automatic deploy on Vercel. Ensure `npm run build` succeeds and that `theme/` is the deploy output (already set in `vercel.json`).
+
+---
+
+## Contact form (Vercel)
+
+The contact form submits to **`/api/contact`**. The serverless function lives in **`api/contact.js`** at the repo root (Vercel picks this up automatically).
+
+### What to check on Vercel
+
+1. **Environment variables** (Project → Settings → Environment Variables). Add:
+   - `SMTP_HOST` — your mail server (e.g. `smtp.gmail.com`, or your host’s SMTP).
+   - `SMTP_PORT` — usually `587` (or `465` for SSL).
+   - `SMTP_SECURE` — `true` for port 465, `false` for 587.
+   - `SMTP_USER` — SMTP login email.
+   - `SMTP_PASS` — SMTP password (use an app password if required).
+   - `TO_EMAIL` — where enquiries are sent (default: `bookings@tugamgamefarm.co.za`).
+   - `FROM_EMAIL` — (optional) sender address; defaults to `SMTP_USER`.
+
+2. **Build & output**
+   - Build command: `npm run build` (or leave default if it runs this).
+   - Output directory: `theme` (must match `vercel.json`).
+
+3. **After deploy**
+   - Open the live site, go to Contact, submit a test message.
+   - If it fails: check Vercel → Deployments → [latest] → Functions for errors, and confirm all env vars are set and have no typos.

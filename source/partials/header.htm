@@ -2,17 +2,24 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>Tugam Cattle & Game Farm</title>
+    <title>@@title</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta
-      name="description"
-      content="Tugam Cattle & Game Farm offers accommodation, venue hire and hunting experiences in a peaceful natural setting in KwaZulu-Natal."
-    />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=5.0"
-    />
+    <meta name="description" content="@@description" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
     <meta name="author" content="Tugam Cattle & Game Farm" />
+
+    <!-- Open Graph / Social (update baseUrl if your domain changes) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="@@title" />
+    <meta property="og:description" content="@@description" />
+    <meta property="og:image" content="https://tugamgamefarm.co.za/images/logo.png" />
+    <meta property="og:url" content="https://tugamgamefarm.co.za/" />
+    <meta property="og:site_name" content="Tugam Cattle & Game Farm" />
+    <meta property="og:locale" content="en_ZA" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="@@title" />
+    <meta name="twitter:description" content="@@description" />
+    <meta name="twitter:image" content="https://tugamgamefarm.co.za/images/logo.png" />
 
     <link rel="icon" type="image/png" href="images/favicon.png" />
     <link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css" />
@@ -23,12 +30,9 @@
     <link rel="stylesheet" href="plugins/colorbox/colorbox.css" />
     <link rel="stylesheet" href="css/style.css" />
 
-    <!-- Leaflet Map Styles -->
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-    />
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <!-- Leaflet Map (deferred for faster initial load) -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" defer></script>
 
     <style>
       /* Address link styling */
