@@ -1,3 +1,8 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+@use "sass:color";
+@use "sass:meta";
+
 /* Table of Content
 ==================================================
 1.    Slider
@@ -1682,7 +1687,7 @@ img.testimonial-thumb {
 }
 /* Pricing featured */
 .ts-pricing-box.ts-pricing-featured .ts-pricing-header {
-  background: adjust-hue($color-primary, -7);
+  background: color.adjust($color-primary, $hue: -7deg);
 }
 
 /* Contact Us
@@ -2226,7 +2231,7 @@ label {
 }
 
 $accom-primary: if(
-  global-variable-exists(color-primary),
+  meta.global-variable-exists(color-primary),
   $color-primary,
   #305d26
 );
@@ -2325,7 +2330,7 @@ $accom-primary: if(
 // Accommodation hero styles
 $accom-hero-height: 420px;
 $brand-green: if(
-  global-variable-exists(color-primary),
+  meta.global-variable-exists(color-primary),
   $color-primary,
   #305d26
 );

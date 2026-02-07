@@ -1,7 +1,5 @@
-@import "mixins";
-@import "variables";
-@import "typography";
-@import "common";
-@import "buttons";
-@import "templates/navigation";
-@import "templates/main";
+@use "typography";
+@use "common";
+@use "buttons";
+@use "templates/navigation";
+@use "templates/main";
