@@ -318,13 +318,12 @@ ul.top-info-box > li.nav-search i {
 
 .navbar-toggler {
   margin: 10px 0;
-  padding: 6px;
+  padding: 10px 12px;
   border-radius: 0;
   font-size: 1rem;
   background: $color-primary;
-  &:focus {
-    outline: 0;
-  }
+  min-height: 44px;
+  min-width: 44px;
 }
 .navbar-dark .navbar-toggler-icon,
 .navbar-light .navbar-toggler-icon {

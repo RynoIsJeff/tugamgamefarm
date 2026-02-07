@@ -49,6 +49,26 @@ a:hover {
   color: #000;
 }
 
+/* Focus styles for keyboard and assistive tech (visible on focus-visible only) */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid $color-primary;
+  outline-offset: 2px;
+}
+
+/* Fallback for browsers without :focus-visible */
+a:focus,
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 2px solid $color-primary;
+  outline-offset: 2px;
+}
+
 a.read-more {
   color: #305d26;
   font-weight: 700;
@@ -581,5 +601,24 @@ a[href^="tel"] {
 
   .contact-page #contact-form .btn {
     width: 100%;
+  }
+}
+
+/* Mobile: prevent horizontal scroll and align content */
+@media (max-width: 767px) {
+  .body-inner {
+    overflow-x: hidden;
+  }
+
+  .top-bar .container,
+  .footer .container,
+  .main-container .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .banner-carousel .slider-content .container {
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
