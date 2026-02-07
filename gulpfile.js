@@ -7,7 +7,6 @@ const fileinclude = require("gulp-file-include");
 const autoprefixer = require("gulp-autoprefixer");
 const bs = require("browser-sync").create();
 const rimraf = require("rimraf");
-const comments = require("gulp-header-comment");
 
 var path = {
   src: {
@@ -35,14 +34,6 @@ gulp.task("html:build", function () {
         basepath: path.src.incdir,
       })
     )
-    .pipe(
-      comments(`
-    WEBSITE: https://themefisher.com
-    TWITTER: https://twitter.com/themefisher
-    FACEBOOK: https://www.facebook.com/themefisher
-    GITHUB: https://github.com/themefisher/
-    `)
-    )
     .pipe(gulp.dest(path.build.dirDev))
     .pipe(
       bs.reload({
@@ -63,14 +54,6 @@ gulp.task("scss:build", function () {
     )
     .pipe(autoprefixer())
     .pipe(sourcemaps.write("/"))
-    .pipe(
-      comments(`
-    WEBSITE: https://themefisher.com
-    TWITTER: https://twitter.com/themefisher
-    FACEBOOK: https://www.facebook.com/themefisher
-    GITHUB: https://github.com/themefisher/
-    `)
-    )
     .pipe(gulp.dest(path.build.dirDev + "css/"))
     .pipe(
       bs.reload({
@@ -83,14 +66,6 @@ gulp.task("scss:build", function () {
 gulp.task("js:build", function () {
   return gulp
     .src(path.src.js)
-    .pipe(
-      comments(`
-  WEBSITE: https://themefisher.com
-  TWITTER: https://twitter.com/themefisher
-  FACEBOOK: https://www.facebook.com/themefisher
-  GITHUB: https://github.com/themefisher/
-  `)
-    )
     .pipe(gulp.dest(path.build.dirDev + "js/"))
     .pipe(
       bs.reload({
@@ -172,6 +147,7 @@ gulp.task(
     "js:build",
     "scss:build",
     "images:build",
-    "plugins:build"
+    "plugins:build",
+    "others:build"
   )
 );
