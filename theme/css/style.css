@@ -110,6 +110,26 @@ a:hover {
   color: #000;
 }
 
+/* Focus styles for keyboard and assistive tech (visible on focus-visible only) */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid #305d26;
+  outline-offset: 2px;
+}
+
+/* Fallback for browsers without :focus-visible */
+a:focus,
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 2px solid #305d26;
+  outline-offset: 2px;
+}
+
 a.read-more {
   color: #305d26;
   font-weight: 700;
@@ -636,6 +656,22 @@ a[href^=tel] {
     width: 100%;
   }
 }
+/* Mobile: prevent horizontal scroll and align content */
+@media (max-width: 767px) {
+  .body-inner {
+    overflow-x: hidden;
+  }
+  .top-bar .container,
+  .footer .container,
+  .main-container .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .banner-carousel .slider-content .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
 /* Button */
 .btn:active, .btn:focus {
   box-shadow: none !important;
@@ -1010,13 +1046,12 @@ ul.top-info-box > li.nav-search i {
 
 .navbar-toggler {
   margin: 10px 0;
-  padding: 6px;
+  padding: 10px 12px;
   border-radius: 0;
   font-size: 1rem;
   background: #305d26;
-}
-.navbar-toggler:focus {
-  outline: 0;
+  min-height: 44px;
+  min-width: 44px;
 }
 
 .navbar-dark .navbar-toggler-icon,

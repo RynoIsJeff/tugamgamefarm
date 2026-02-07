@@ -21,6 +21,11 @@
     <meta name="twitter:description" content="How Tugam Cattle & Game Farm collects, uses and protects your personal information." />
     <meta name="twitter:image" content="https://tugamgamefarm.co.za/images/logo.png" />
 
+    <!-- Preconnect for faster external resources -->
+    <link rel="preconnect" href="https://unpkg.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
     <link rel="icon" type="image/png" href="images/favicon.png" />
     <link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css" />
     <link rel="stylesheet" href="plugins/fontawesome/css/all.min.css" />
@@ -58,9 +63,27 @@
       .social-links-placeholder {
         display: none !important;
       }
+
+      /* Skip link: visible on focus for keyboard/screen reader users */
+      .skip-link {
+        position: absolute;
+        left: -9999px;
+        z-index: 10001;
+        padding: 12px 20px;
+        background: #305d26;
+        color: #fff !important;
+        font-weight: 600;
+        border-radius: 0 0 4px 0;
+        text-decoration: none;
+      }
+      .skip-link:focus {
+        left: 0;
+        top: 0;
+      }
     </style>
   </head>
   <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
     <div class="body-inner">
       <div id="top-bar" class="top-bar">
         <div class="container">
@@ -177,7 +200,7 @@
               class="navbar-toggler"
               type="button"
               data-toggle="collapse"
-              data-target=".navbar-collapse"
+              data-target="#navbar-collapse"
               aria-controls="navbar-collapse"
               aria-expanded="false"
               aria-label="Toggle navigation"
@@ -223,7 +246,7 @@
 <!--/ Header end -->
 
 
-<div class="banner-carousel banner-carousel-1 mb-0">
+<div id="main-content" class="banner-carousel banner-carousel-1 mb-0">
   <div
     class="banner-carousel-item"
     style="background-image: url(images/about/banner2.png)"
