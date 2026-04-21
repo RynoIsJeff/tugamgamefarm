@@ -8,18 +8,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
     <meta name="author" content="Tugam Cattle & Game Farm" />
 
-    <!-- Open Graph / Social (update baseUrl if your domain changes) -->
+    <!-- Canonical URL -->
+    <link rel="canonical" href="@@canonical" />
+
+    <!-- Open Graph / Social -->
     <meta property="og:type" content="website" />
     <meta property="og:title" content="@@title" />
     <meta property="og:description" content="@@description" />
-    <meta property="og:image" content="https://tugamgamefarm.co.za/images/logo.png" />
-    <meta property="og:url" content="https://tugamgamefarm.co.za/" />
+    <meta property="og:image" content="@@og_image" />
+    <meta property="og:url" content="@@canonical" />
     <meta property="og:site_name" content="Tugam Cattle & Game Farm" />
     <meta property="og:locale" content="en_ZA" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="@@title" />
     <meta name="twitter:description" content="@@description" />
-    <meta name="twitter:image" content="https://tugamgamefarm.co.za/images/logo.png" />
+    <meta name="twitter:image" content="@@og_image" />
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Tugam Cattle & Game Farm",
+      "description": "Family-owned game farm in Pongola, KwaZulu-Natal offering accommodation, venue hire, Ankole cattle experiences and guided hunting.",
+      "url": "https://tugamgamefarm.co.za",
+      "logo": "https://tugamgamefarm.co.za/images/logo.png",
+      "image": "https://tugamgamefarm.co.za/images/slider-main/accommodation.png",
+      "telephone": "+27664952114",
+      "email": "bookings@tugamgamefarm.co.za",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Lot 10, R69",
+        "addressLocality": "Pongola",
+        "postalCode": "3170",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -27.5666,
+        "longitude": 31.6681
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+        "opens": "07:00",
+        "closes": "20:00"
+      },
+      "priceRange": "R300 - R1500",
+      "currenciesAccepted": "ZAR",
+      "paymentAccepted": "Cash, EFT",
+      "areaServed": "Pongola, KwaZulu-Natal, South Africa",
+      "sameAs": []
+    }
+    </script>
 
     <!-- Preconnect for faster external resources -->
     <link rel="preconnect" href="https://unpkg.com" />

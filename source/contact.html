@@ -1,4 +1,4 @@
-@@include('header.htm', { "title": "Contact Us | Tugam Cattle & Game Farm", "description": "Get in touch with Tugam Cattle & Game Farm for bookings, venue hire, accommodation and hunting enquiries. Pongola, KwaZulu-Natal." }) @@include('blocks/navigation-1.htm')
+@@include('header.htm', { "title": "Contact Us | Tugam Cattle & Game Farm", "description": "Get in touch with Tugam Cattle & Game Farm for bookings, venue hire, accommodation and hunting enquiries. Pongola, KwaZulu-Natal.", "canonical": "https://tugamgamefarm.co.za/contact.html", "og_image": "https://tugamgamefarm.co.za/images/contact/banner1.png" }) @@include('blocks/navigation-1.htm')
 
 <!-- Contact Banner Carousel -->
 <div id="main-content" class="banner-carousel banner-carousel-1 mb-0">
@@ -105,8 +105,8 @@
             <p class="mb-3">Bookings & enquiries</p>
 
             <div
-              class="d-flex justify-content-center"
-              style="gap: 10px; flex-wrap: wrap"
+              class="d-flex justify-content-center d-gap-10"
+              style="flex-wrap: wrap"
             >
               <a class="btn btn-primary btn-sm" href="tel:+27664952114">Call</a>
               <a
@@ -218,7 +218,9 @@
         <form id="contact-form-main" class="contact-form" method="POST">
           <div class="row">
             <div class="col-md-6 mb-3">
+              <label for="contact-name" class="sr-only">Full Name</label>
               <input
+                id="contact-name"
                 class="form-control"
                 type="text"
                 name="name"
@@ -227,7 +229,9 @@
               />
             </div>
             <div class="col-md-6 mb-3">
+              <label for="contact-phone" class="sr-only">Phone Number</label>
               <input
+                id="contact-phone"
                 class="form-control"
                 type="tel"
                 name="phone"
@@ -236,16 +240,19 @@
               />
             </div>
             <div class="col-md-12 mb-3">
+              <label for="contact-email" class="sr-only">Email Address (optional)</label>
               <input
+                id="contact-email"
                 class="form-control"
                 type="email"
                 name="email"
-                placeholder="Email Address"
+                placeholder="Email Address (optional)"
               />
             </div>
 
             <div class="col-md-12 mb-3">
-              <select class="form-control" name="enquiry_type" required>
+              <label for="contact-enquiry" class="sr-only">Enquiry type</label>
+              <select id="contact-enquiry" class="form-control" name="enquiry_type" required>
                 <option value="" disabled selected>
                   What is your enquiry about?
                 </option>
@@ -258,7 +265,9 @@
             </div>
 
             <div class="col-md-12 mb-3">
+              <label for="contact-subject" class="sr-only">Subject (optional)</label>
               <input
+                id="contact-subject"
                 class="form-control"
                 type="text"
                 name="subject"
@@ -267,7 +276,9 @@
             </div>
 
             <div class="col-md-12 mb-3">
+              <label for="contact-message" class="sr-only">Your message</label>
               <textarea
+                id="contact-message"
                 class="form-control"
                 name="message"
                 rows="6"
@@ -276,7 +287,7 @@
               ></textarea>
             </div>
 
-            <div class="col-md-12 d-flex align-items-center" style="gap: 10px">
+            <div class="col-md-12 d-flex align-items-center d-gap-10">
               <button class="btn btn-primary" type="submit" id="contact-submit">
                 Send Message
               </button>

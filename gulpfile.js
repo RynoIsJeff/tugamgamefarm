@@ -5,6 +5,8 @@ const gulp = require("gulp");
 const sourcemaps = require("gulp-sourcemaps");
 const fileinclude = require("gulp-file-include");
 const autoprefixer = require("gulp-autoprefixer");
+const cleanCSS = require("gulp-clean-css");
+const uglify = require("gulp-uglify");
 const bs = require("browser-sync").create();
 const rimraf = require("rimraf");
 
@@ -12,6 +14,7 @@ var path = {
   src: {
     html: "source/*.html",
     sitemap: "source/sitemap.xml",
+    robots: "source/robots.txt",
     others: "source/*.+(php|ico|png)",
     htminc: "source/partials/**/*.htm",
     incdir: "source/partials/",
@@ -43,7 +46,7 @@ gulp.task("html:build", function () {
     );
 });
 
-// SCSS
+// SCSS — dev (expanded + sourcemaps)
 gulp.task("scss:build", function () {
   return gulp
     .src(path.src.scss)
@@ -63,7 +66,21 @@ gulp.task("scss:build", function () {
     );
 });
 
-// Javascript
+// SCSS — production (compressed, no sourcemaps)
+gulp.task("scss:prod", function () {
+  return gulp
+    .src(path.src.scss)
+    .pipe(
+      sass({
+        outputStyle: "compressed",
+      }).on("error", sass.logError)
+    )
+    .pipe(autoprefixer())
+    .pipe(cleanCSS())
+    .pipe(gulp.dest(path.build.dirBuild + "css/"));
+});
+
+// Javascript — dev (unminified)
 gulp.task("js:build", function () {
   return gulp
     .src(path.src.js)
@@ -73,6 +90,14 @@ gulp.task("js:build", function () {
         stream: true,
       })
     );
+});
+
+// Javascript — production (minified)
+gulp.task("js:prod", function () {
+  return gulp
+    .src(path.src.js)
+    .pipe(uglify())
+    .pipe(gulp.dest(path.build.dirBuild + "js/"));
 });
 
 // Images
@@ -109,6 +134,11 @@ gulp.task("sitemap:build", function () {
   return gulp.src(path.src.sitemap).pipe(gulp.dest(path.build.dirDev));
 });
 
+// Robots.txt
+gulp.task("robots:build", function () {
+  return gulp.src(path.src.robots).pipe(gulp.dest(path.build.dirDev));
+});
+
 // Clean Build Folder
 gulp.task("clean", function (cb) {
   rimraf("./theme", cb);
@@ -123,6 +153,7 @@ gulp.task("watch:build", function () {
   gulp.watch(path.src.images, gulp.series("images:build"));
   gulp.watch(path.src.plugins, gulp.series("plugins:build"));
   gulp.watch(path.src.sitemap, gulp.series("sitemap:build"));
+  gulp.watch(path.src.robots, gulp.series("robots:build"));
 });
 
 // Dev Task
@@ -137,6 +168,7 @@ gulp.task(
     "plugins:build",
     "others:build",
     "sitemap:build",
+    "robots:build",
     gulp.parallel("watch:build", function () {
       bs.init({
         server: {
@@ -147,16 +179,17 @@ gulp.task(
   )
 );
 
-// Build Task
+// Production Build Task (minified CSS/JS, no sourcemaps)
 gulp.task(
   "build",
   gulp.series(
     "html:build",
-    "js:build",
-    "scss:build",
+    "js:prod",
+    "scss:prod",
     "images:build",
     "plugins:build",
     "others:build",
-    "sitemap:build"
+    "sitemap:build",
+    "robots:build"
   )
 );
