@@ -8,12 +8,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
     <meta name="author" content="Tugam Cattle & Game Farm" />
 
-    <!-- Open Graph / Social (update baseUrl if your domain changes) -->
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://tugamgamefarm.co.za/privacy-policy.html" />
+
+    <!-- Open Graph / Social -->
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Privacy Policy | Tugam Cattle & Game Farm" />
     <meta property="og:description" content="How Tugam Cattle & Game Farm collects, uses and protects your personal information." />
     <meta property="og:image" content="https://tugamgamefarm.co.za/images/logo.png" />
-    <meta property="og:url" content="https://tugamgamefarm.co.za/" />
+    <meta property="og:url" content="https://tugamgamefarm.co.za/privacy-policy.html" />
     <meta property="og:site_name" content="Tugam Cattle & Game Farm" />
     <meta property="og:locale" content="en_ZA" />
     <meta name="twitter:card" content="summary_large_image" />
@@ -21,23 +24,56 @@
     <meta name="twitter:description" content="How Tugam Cattle & Game Farm collects, uses and protects your personal information." />
     <meta name="twitter:image" content="https://tugamgamefarm.co.za/images/logo.png" />
 
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Tugam Cattle & Game Farm",
+      "description": "Family-owned game farm in Pongola, KwaZulu-Natal offering accommodation, venue hire, Ankole cattle experiences and guided hunting.",
+      "url": "https://tugamgamefarm.co.za",
+      "logo": "https://tugamgamefarm.co.za/images/logo.png",
+      "image": "https://tugamgamefarm.co.za/images/slider-main/accommodation.png",
+      "telephone": "+27664952114",
+      "email": "bookings@tugamgamefarm.co.za",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Lot 10, R69",
+        "addressLocality": "Pongola",
+        "postalCode": "3170",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -27.5666,
+        "longitude": 31.6681
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+        "opens": "07:00",
+        "closes": "20:00"
+      },
+      "priceRange": "R300 - R1500",
+      "currenciesAccepted": "ZAR",
+      "paymentAccepted": "Cash, EFT",
+      "areaServed": "Pongola, KwaZulu-Natal, South Africa",
+      "sameAs": []
+    }
+    </script>
+
     <!-- Preconnect for faster external resources -->
     <link rel="preconnect" href="https://unpkg.com" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
     <link rel="icon" type="image/png" href="images/favicon.png" />
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
     <link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css" />
-    <link rel="stylesheet" href="plugins/fontawesome/css/all.min.css" />
-    <link rel="stylesheet" href="plugins/animate-css/animate.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW37qh2ZmFP1gAPSFiKdoV5bkc2/AuEBJsAcSL0M3q0AhkBO1GiZLiqkFtjFOa4ga34cg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="plugins/slick/slick.css" />
     <link rel="stylesheet" href="plugins/slick/slick-theme.css" />
-    <link rel="stylesheet" href="plugins/colorbox/colorbox.css" />
     <link rel="stylesheet" href="css/style.css" />
-
-    <!-- Leaflet Map (deferred for faster initial load) -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" defer></script>
 
     <style>
       /* Address link styling */
@@ -368,6 +404,14 @@
             Monday - Sunday: <span class="text-right">By Appointment</span>
             <br />
             Public Holidays: <span class="text-right">Open</span>
+            <br /><br />
+            <strong>Phone / WhatsApp:</strong><br />
+            <a href="tel:+27664952114">066 495 2114</a>
+            &nbsp;|&nbsp;
+            <a href="https://wa.me/27664952114" target="_blank" rel="noopener">WhatsApp</a>
+            <br /><br />
+            <strong>Email:</strong><br />
+            <a href="mailto:bookings@tugamgamefarm.co.za">bookings@tugamgamefarm.co.za</a>
           </div>
         </div>
         <!-- Col end -->
@@ -440,6 +484,17 @@
 </footer>
 <!-- Footer end -->
 
+<!-- #2 — WhatsApp floating action button -->
+<a
+  href="https://wa.me/27664952114"
+  class="whatsapp-fab"
+  target="_blank"
+  rel="noopener"
+  aria-label="Chat with us on WhatsApp"
+>
+  <i class="fab fa-whatsapp"></i>
+</a>
+
 <!-- Javascript Files ================================================== -->
 <!-- initialize jQuery Library -->
 <script src="plugins/jQuery/jquery.min.js"></script>
@@ -447,13 +502,29 @@
 <script src="plugins/bootstrap/bootstrap.min.js" defer></script>
 <!-- Slick Carousel -->
 <script src="plugins/slick/slick.min.js"></script>
-<script src="plugins/slick/slick-animation.min.js"></script>
-<!-- Color box -->
-<script src="plugins/colorbox/jquery.colorbox.js"></script>
-<!-- shuffle -->
-<script src="plugins/shuffle/shuffle.min.js" defer></script>
 <!-- Google Map API Key-->
 <!-- Google Map Plugin-->
 <script src="js/script.js"></script>
+
+<!-- #1 — Active nav indicator -->
+<script>
+  (function () {
+    var path = window.location.pathname.replace(/\/$/, "") || "/";
+    var links = document.querySelectorAll(".navbar-nav .nav-item .nav-link");
+    links.forEach(function (link) {
+      var href = link.getAttribute("href") || "";
+      // normalise: strip leading "./" and trailing "/"
+      var normalHref = href.replace(/^\.\//, "").replace(/\/$/, "") || "/";
+      var normalPath =
+        path.split("/").pop() || (path === "/" ? "/" : path.split("/").pop());
+      if (
+        normalHref === normalPath ||
+        (normalHref === "/" && (path === "/" || path === ""))
+      ) {
+        link.closest(".nav-item").classList.add("active");
+      }
+    });
+  })();
+</script>
 <!-- Body inner end -->
 

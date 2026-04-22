@@ -45,6 +45,14 @@
             Monday - Sunday: <span class="text-right">By Appointment</span>
             <br />
             Public Holidays: <span class="text-right">Open</span>
+            <br /><br />
+            <strong>Phone / WhatsApp:</strong><br />
+            <a href="tel:+27664952114">066 495 2114</a>
+            &nbsp;|&nbsp;
+            <a href="https://wa.me/27664952114" target="_blank" rel="noopener">WhatsApp</a>
+            <br /><br />
+            <strong>Email:</strong><br />
+            <a href="mailto:bookings@tugamgamefarm.co.za">bookings@tugamgamefarm.co.za</a>
           </div>
         </div>
         <!-- Col end -->
@@ -117,6 +125,17 @@
 </footer>
 <!-- Footer end -->
 
+<!-- #2 — WhatsApp floating action button -->
+<a
+  href="https://wa.me/27664952114"
+  class="whatsapp-fab"
+  target="_blank"
+  rel="noopener"
+  aria-label="Chat with us on WhatsApp"
+>
+  <i class="fab fa-whatsapp"></i>
+</a>
+
 <!-- Javascript Files ================================================== -->
 <!-- initialize jQuery Library -->
 <script src="plugins/jQuery/jquery.min.js"></script>
@@ -124,12 +143,28 @@
 <script src="plugins/bootstrap/bootstrap.min.js" defer></script>
 <!-- Slick Carousel -->
 <script src="plugins/slick/slick.min.js"></script>
-<script src="plugins/slick/slick-animation.min.js"></script>
-<!-- Color box -->
-<script src="plugins/colorbox/jquery.colorbox.js"></script>
-<!-- shuffle -->
-<script src="plugins/shuffle/shuffle.min.js" defer></script>
 <!-- Google Map API Key-->
 <!-- Google Map Plugin-->
 <script src="js/script.js"></script>
+
+<!-- #1 — Active nav indicator -->
+<script>
+  (function () {
+    var path = window.location.pathname.replace(/\/$/, "") || "/";
+    var links = document.querySelectorAll(".navbar-nav .nav-item .nav-link");
+    links.forEach(function (link) {
+      var href = link.getAttribute("href") || "";
+      // normalise: strip leading "./" and trailing "/"
+      var normalHref = href.replace(/^\.\//, "").replace(/\/$/, "") || "/";
+      var normalPath =
+        path.split("/").pop() || (path === "/" ? "/" : path.split("/").pop());
+      if (
+        normalHref === normalPath ||
+        (normalHref === "/" && (path === "/" || path === ""))
+      ) {
+        link.closest(".nav-item").classList.add("active");
+      }
+    });
+  })();
+</script>
 <!-- Body inner end -->

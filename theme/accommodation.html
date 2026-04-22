@@ -8,18 +8,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
     <meta name="author" content="Tugam Cattle & Game Farm" />
 
-    <!-- Open Graph / Social (update baseUrl if your domain changes) -->
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://tugamgamefarm.co.za/accommodation.html" />
+
+    <!-- Open Graph / Social -->
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Accommodation | Tugam Cattle & Game Farm" />
     <meta property="og:description" content="Rustic accommodation at Tugam — Khangela Lodge, Ankole Kraal, Matumi and more. Unplug and unwind in nature near Pongola." />
-    <meta property="og:image" content="https://tugamgamefarm.co.za/images/logo.png" />
-    <meta property="og:url" content="https://tugamgamefarm.co.za/" />
+    <meta property="og:image" content="https://tugamgamefarm.co.za/images/accommodation/banner1.jpg" />
+    <meta property="og:url" content="https://tugamgamefarm.co.za/accommodation.html" />
     <meta property="og:site_name" content="Tugam Cattle & Game Farm" />
     <meta property="og:locale" content="en_ZA" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Accommodation | Tugam Cattle & Game Farm" />
     <meta name="twitter:description" content="Rustic accommodation at Tugam — Khangela Lodge, Ankole Kraal, Matumi and more. Unplug and unwind in nature near Pongola." />
-    <meta name="twitter:image" content="https://tugamgamefarm.co.za/images/logo.png" />
+    <meta name="twitter:image" content="https://tugamgamefarm.co.za/images/accommodation/banner1.jpg" />
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Tugam Cattle & Game Farm",
+      "description": "Family-owned game farm in Pongola, KwaZulu-Natal offering accommodation, venue hire, Ankole cattle experiences and guided hunting.",
+      "url": "https://tugamgamefarm.co.za",
+      "logo": "https://tugamgamefarm.co.za/images/logo.png",
+      "image": "https://tugamgamefarm.co.za/images/slider-main/accommodation.png",
+      "telephone": "+27664952114",
+      "email": "bookings@tugamgamefarm.co.za",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Lot 10, R69",
+        "addressLocality": "Pongola",
+        "postalCode": "3170",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -27.5666,
+        "longitude": 31.6681
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+        "opens": "07:00",
+        "closes": "20:00"
+      },
+      "priceRange": "R300 - R1500",
+      "currenciesAccepted": "ZAR",
+      "paymentAccepted": "Cash, EFT",
+      "areaServed": "Pongola, KwaZulu-Natal, South Africa",
+      "sameAs": []
+    }
+    </script>
 
     <!-- Preconnect for faster external resources -->
     <link rel="preconnect" href="https://unpkg.com" />
@@ -27,17 +68,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
     <link rel="icon" type="image/png" href="images/favicon.png" />
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
     <link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css" />
-    <link rel="stylesheet" href="plugins/fontawesome/css/all.min.css" />
-    <link rel="stylesheet" href="plugins/animate-css/animate.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW37qh2ZmFP1gAPSFiKdoV5bkc2/AuEBJsAcSL0M3q0AhkBO1GiZLiqkFtjFOa4ga34cg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="plugins/slick/slick.css" />
     <link rel="stylesheet" href="plugins/slick/slick-theme.css" />
-    <link rel="stylesheet" href="plugins/colorbox/colorbox.css" />
     <link rel="stylesheet" href="css/style.css" />
-
-    <!-- Leaflet Map (deferred for faster initial load) -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" defer></script>
 
     <style>
       /* Address link styling */
@@ -265,11 +301,11 @@
               <a href="#khangela" class="slider btn btn-primary"
                 >Khangela Lodge</a
               >
-              <a href="#ankole-kraal" class="slider btn btn-primary"
+              <a href="#ankole-kraal" class="slider btn-link-light"
                 >Ankole Kraal</a
               >
-              <a href="#matumi" class="slider btn btn-primary"
-                >Matumi Hunting Camp</a
+              <a href="#matumi" class="slider btn-link-light"
+                >Matumi Camp</a
               >
             </p>
           </div>
@@ -290,10 +326,10 @@
             <h3 class="slide-sub-title">Khangela Lodge</h3>
             <h2 class="slide-title">Relax, Gather & Unwind</h2>
             <p class="mt-3">
-              <a href="#khangela" class="slider btn btn-primary">View Rooms</a>
               <a href="contact.html" class="slider btn btn-primary"
                 >Book Your Stay</a
               >
+              <a href="#khangela" class="slider btn-link-light">View Rooms</a>
             </p>
           </div>
         </div>
@@ -315,10 +351,10 @@
               Practical, Comfortable & Close to the Action
             </h2>
             <p class="mt-3">
-              <a href="#matumi" class="slider btn btn-primary">Explore Camp</a>
               <a href="contact.html" class="slider btn btn-primary"
                 >Enquire / Book</a
               >
+              <a href="#matumi" class="slider btn-link-light">Explore Camp</a>
             </p>
           </div>
         </div>
@@ -329,6 +365,68 @@
 <!-- /Accommodation Banner Carousel -->
 
 <main class="main-container section-padding">
+
+  <!-- #5 — Room quick-compare overview -->
+  <div class="container mb-5">
+    <div class="row mb-3">
+      <div class="col-12">
+        <h2 class="section-sub-title">Quick Room Comparison</h2>
+        <p class="mb-0 text-muted">All rooms at Khangela Lodge are self-catering. Rate: R600 p.p.p.n (excl. VAT)</p>
+      </div>
+    </div>
+    <div class="table-responsive">
+      <table class="table table-bordered room-compare-table">
+        <thead>
+          <tr>
+            <th>Room</th>
+            <th>Beds</th>
+            <th>Sleeps</th>
+            <th>Highlights</th>
+            <th>Book</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><a href="#kudu" class="room-compare-link">Kudu</a></td>
+            <td>1 Double + 2 Singles</td>
+            <td>4</td>
+            <td>Private deck</td>
+            <td><a href="contact.html" class="btn btn-primary btn-sm">Book</a></td>
+          </tr>
+          <tr>
+            <td><a href="#giraffe" class="room-compare-link">Giraffe</a></td>
+            <td>4 Singles</td>
+            <td>4</td>
+            <td>Lapa area</td>
+            <td><a href="contact.html" class="btn btn-primary btn-sm">Book</a></td>
+          </tr>
+          <tr>
+            <td><a href="#zebra" class="room-compare-link">Zebra</a></td>
+            <td>1 Double + 2 Singles</td>
+            <td>4</td>
+            <td>Lapa area</td>
+            <td><a href="contact.html" class="btn btn-primary btn-sm">Book</a></td>
+          </tr>
+          <tr>
+            <td><a href="#nyala" class="room-compare-link">Nyala</a></td>
+            <td>2 Singles</td>
+            <td>2</td>
+            <td>Bathroom en suite</td>
+            <td><a href="contact.html" class="btn btn-primary btn-sm">Book</a></td>
+          </tr>
+          <tr>
+            <td><a href="#impala" class="room-compare-link">Impala</a></td>
+            <td>2 Singles</td>
+            <td>2</td>
+            <td>Bathroom en suite</td>
+            <td><a href="contact.html" class="btn btn-primary btn-sm">Book</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <!-- /Room quick-compare overview -->
+
   <!-- KHANGELA -->
   <div class="container" id="khangela">
     <div class="row mb-4">
@@ -411,7 +509,7 @@
     </div>
 
     <!-- Kudu -->
-    <article class="accom-card">
+    <article class="accom-card" id="kudu">
       <div class="row align-items-stretch">
         <div class="col-lg-5">
           <img
@@ -432,43 +530,43 @@
             </ul>
             <div class="accom-gallery slick-thumbs" aria-label="Kudu gallery">
               <div>
-                <img src="images/accommodation/kudu/1.jpeg" alt="Kudu 1" />
+                <img src="images/accommodation/kudu/1.jpeg" alt="Kudu room at Khangela Lodge — photo 1" />
               </div>
               <div>
-                <img src="images/accommodation/kudu/2.jpeg" alt="Kudu 2" />
+                <img src="images/accommodation/kudu/2.jpeg" alt="Kudu room at Khangela Lodge — photo 2" />
               </div>
               <div>
-                <img src="images/accommodation/kudu/3.jpeg" alt="Kudu 3" />
+                <img src="images/accommodation/kudu/3.jpeg" alt="Kudu room at Khangela Lodge — photo 3" />
               </div>
               <div>
-                <img src="images/accommodation/kudu/4.jpeg" alt="Kudu 4" />
+                <img src="images/accommodation/kudu/4.jpeg" alt="Kudu room at Khangela Lodge — photo 4" />
               </div>
               <div>
-                <img src="images/accommodation/kudu/5.jpeg" alt="Kudu 5" />
+                <img src="images/accommodation/kudu/5.jpeg" alt="Kudu room at Khangela Lodge — photo 5" />
               </div>
               <div>
-                <img src="images/accommodation/kudu/6.jpeg" alt="Kudu 6" />
+                <img src="images/accommodation/kudu/6.jpeg" alt="Kudu room at Khangela Lodge — photo 6" />
               </div>
               <div>
-                <img src="images/accommodation/kudu/7.jpeg" alt="Kudu 7" />
+                <img src="images/accommodation/kudu/7.jpeg" alt="Kudu room at Khangela Lodge — photo 7" />
               </div>
               <div>
-                <img src="images/accommodation/kudu/8.jpeg" alt="Kudu 8" />
+                <img src="images/accommodation/kudu/8.jpeg" alt="Kudu room at Khangela Lodge — photo 8" />
               </div>
               <div>
-                <img src="images/accommodation/kudu/9.jpeg" alt="Kudu 9" />
+                <img src="images/accommodation/kudu/9.jpeg" alt="Kudu room at Khangela Lodge — photo 9" />
               </div>
               <div>
-                <img src="images/accommodation/kudu/10.jpeg" alt="Kudu 10" />
+                <img src="images/accommodation/kudu/10.jpeg" alt="Kudu room at Khangela Lodge — photo 10" />
               </div>
               <div>
-                <img src="images/accommodation/kudu/11.jpeg" alt="Kudu 11" />
+                <img src="images/accommodation/kudu/11.jpeg" alt="Kudu room at Khangela Lodge — photo 11" />
               </div>
               <div>
-                <img src="images/accommodation/kudu/12.jpeg" alt="Kudu 12" />
+                <img src="images/accommodation/kudu/12.jpeg" alt="Kudu room at Khangela Lodge — photo 12" />
               </div>
               <div>
-                <img src="images/accommodation/kudu/13.jpeg" alt="Kudu 13" />
+                <img src="images/accommodation/kudu/13.jpeg" alt="Kudu room at Khangela Lodge — photo 13" />
               </div>
             </div>
             <a href="contact.html" class="btn btn-primary mt-3">Book Now</a>
@@ -478,7 +576,7 @@
     </article>
 
     <!-- Giraffe -->
-    <article class="accom-card">
+    <article class="accom-card" id="giraffe">
       <div class="row align-items-stretch">
         <div class="col-lg-5">
           <img
@@ -503,73 +601,73 @@
               <div>
                 <img
                   src="images/accommodation/giraffe/1.jpeg"
-                  alt="Giraffe 1"
+                  alt="Giraffe room at Khangela Lodge — photo 1"
                 />
               </div>
               <div>
                 <img
                   src="images/accommodation/giraffe/2.jpeg"
-                  alt="Giraffe 2"
+                  alt="Giraffe room at Khangela Lodge — photo 2"
                 />
               </div>
               <div>
                 <img
                   src="images/accommodation/giraffe/3.jpeg"
-                  alt="Giraffe 3"
+                  alt="Giraffe room at Khangela Lodge — photo 3"
                 />
               </div>
               <div>
                 <img
                   src="images/accommodation/giraffe/4.jpeg"
-                  alt="Giraffe 4"
+                  alt="Giraffe room at Khangela Lodge — photo 4"
                 />
               </div>
               <div>
                 <img
                   src="images/accommodation/giraffe/5.jpeg"
-                  alt="Giraffe 5"
+                  alt="Giraffe room at Khangela Lodge — photo 5"
                 />
               </div>
               <div>
                 <img
                   src="images/accommodation/giraffe/6.jpeg"
-                  alt="Giraffe 6"
+                  alt="Giraffe room at Khangela Lodge — photo 6"
                 />
               </div>
               <div>
                 <img
                   src="images/accommodation/giraffe/7.jpeg"
-                  alt="Giraffe 7"
+                  alt="Giraffe room at Khangela Lodge — photo 7"
                 />
               </div>
               <div>
                 <img
                   src="images/accommodation/giraffe/8.jpeg"
-                  alt="Giraffe 8"
+                  alt="Giraffe room at Khangela Lodge — photo 8"
                 />
               </div>
               <div>
                 <img
                   src="images/accommodation/giraffe/9.jpeg"
-                  alt="Giraffe 9"
+                  alt="Giraffe room at Khangela Lodge — photo 9"
                 />
               </div>
               <div>
                 <img
                   src="images/accommodation/giraffe/10.jpeg"
-                  alt="Giraffe 10"
+                  alt="Giraffe room at Khangela Lodge — photo 10"
                 />
               </div>
               <div>
                 <img
                   src="images/accommodation/giraffe/11.jpeg"
-                  alt="Giraffe 11"
+                  alt="Giraffe room at Khangela Lodge — photo 11"
                 />
               </div>
               <div>
                 <img
                   src="images/accommodation/giraffe/12.jpeg"
-                  alt="Giraffe 12"
+                  alt="Giraffe room at Khangela Lodge — photo 12"
                 />
               </div>
             </div>
@@ -580,7 +678,7 @@
     </article>
 
     <!-- Zebra -->
-    <article class="accom-card">
+    <article class="accom-card" id="zebra">
       <div class="row align-items-stretch">
         <div class="col-lg-5">
           <img
@@ -601,25 +699,25 @@
             </ul>
             <div class="accom-gallery slick-thumbs" aria-label="Zebra gallery">
               <div>
-                <img src="images/accommodation/zebra/1.jpeg" alt="Zebra 1" />
+                <img src="images/accommodation/zebra/1.jpeg" alt="Zebra room at Khangela Lodge — photo 1" />
               </div>
               <div>
-                <img src="images/accommodation/zebra/2.jpeg" alt="Zebra 2" />
+                <img src="images/accommodation/zebra/2.jpeg" alt="Zebra room at Khangela Lodge — photo 2" />
               </div>
               <div>
-                <img src="images/accommodation/zebra/3.jpeg" alt="Zebra 3" />
+                <img src="images/accommodation/zebra/3.jpeg" alt="Zebra room at Khangela Lodge — photo 3" />
               </div>
               <div>
-                <img src="images/accommodation/zebra/4.jpeg" alt="Zebra 4" />
+                <img src="images/accommodation/zebra/4.jpeg" alt="Zebra room at Khangela Lodge — photo 4" />
               </div>
               <div>
-                <img src="images/accommodation/zebra/5.jpeg" alt="Zebra 5" />
+                <img src="images/accommodation/zebra/5.jpeg" alt="Zebra room at Khangela Lodge — photo 5" />
               </div>
               <div>
-                <img src="images/accommodation/zebra/6.jpeg" alt="Zebra 6" />
+                <img src="images/accommodation/zebra/6.jpeg" alt="Zebra room at Khangela Lodge — photo 6" />
               </div>
               <div>
-                <img src="images/accommodation/zebra/7.jpeg" alt="Zebra 7" />
+                <img src="images/accommodation/zebra/7.jpeg" alt="Zebra room at Khangela Lodge — photo 7" />
               </div>
             </div>
             <a href="contact.html" class="btn btn-primary mt-3">Book Now</a>
@@ -629,7 +727,7 @@
     </article>
 
     <!-- Nyala -->
-    <article class="accom-card">
+    <article class="accom-card" id="nyala">
       <div class="row align-items-stretch">
         <div class="col-lg-5">
           <img
@@ -647,25 +745,25 @@
             </ul>
             <div class="accom-gallery slick-thumbs" aria-label="Nyala gallery">
               <div>
-                <img src="images/accommodation/nyala/1.jpeg" alt="Nyala 1" />
+                <img src="images/accommodation/nyala/1.jpeg" alt="Nyala room at Khangela Lodge — photo 1" />
               </div>
               <div>
-                <img src="images/accommodation/nyala/2.jpeg" alt="Nyala 2" />
+                <img src="images/accommodation/nyala/2.jpeg" alt="Nyala room at Khangela Lodge — photo 2" />
               </div>
               <div>
-                <img src="images/accommodation/nyala/3.jpeg" alt="Nyala 3" />
+                <img src="images/accommodation/nyala/3.jpeg" alt="Nyala room at Khangela Lodge — photo 3" />
               </div>
               <div>
-                <img src="images/accommodation/nyala/4.jpeg" alt="Nyala 4" />
+                <img src="images/accommodation/nyala/4.jpeg" alt="Nyala room at Khangela Lodge — photo 4" />
               </div>
               <div>
-                <img src="images/accommodation/nyala/5.jpeg" alt="Nyala 5" />
+                <img src="images/accommodation/nyala/5.jpeg" alt="Nyala room at Khangela Lodge — photo 5" />
               </div>
               <div>
-                <img src="images/accommodation/nyala/6.jpeg" alt="Nyala 6" />
+                <img src="images/accommodation/nyala/6.jpeg" alt="Nyala room at Khangela Lodge — photo 6" />
               </div>
               <div>
-                <img src="images/accommodation/nyala/7.jpeg" alt="Nyala 7" />
+                <img src="images/accommodation/nyala/7.jpeg" alt="Nyala room at Khangela Lodge — photo 7" />
               </div>
             </div>
             <a href="contact.html" class="btn btn-primary mt-3">Book Now</a>
@@ -675,7 +773,7 @@
     </article>
 
     <!-- Impala -->
-    <article class="accom-card">
+    <article class="accom-card" id="impala">
       <div class="row align-items-stretch">
         <div class="col-lg-5">
           <img
@@ -693,13 +791,13 @@
             </ul>
             <div class="accom-gallery slick-thumbs" aria-label="Impala gallery">
               <div>
-                <img src="images/accommodation/impala/1.jpeg" alt="Impala 1" />
+                <img src="images/accommodation/impala/1.jpeg" alt="Impala room at Khangela Lodge — photo 1" />
               </div>
               <div>
-                <img src="images/accommodation/impala/2.jpeg" alt="Impala 2" />
+                <img src="images/accommodation/impala/2.jpeg" alt="Impala room at Khangela Lodge — photo 2" />
               </div>
               <div>
-                <img src="images/accommodation/impala/3.jpeg" alt="Impala 3" />
+                <img src="images/accommodation/impala/3.jpeg" alt="Impala room at Khangela Lodge — photo 3" />
               </div>
             </div>
             <a href="contact.html" class="btn btn-primary mt-3">Book Now</a>
@@ -795,157 +893,157 @@
               <div>
                 <img
                   src="images/accommodation/ankole-kraal/1.jpg"
-                  alt="Ankole Kraal 1"
+                  alt="Ankole Kraal self-catering camp at Tugam — photo 1"
                 />
               </div>
               <div>
                 <img
                   src="images/accommodation/ankole-kraal/2.jpg"
-                  alt="Ankole Kraal 2"
+                  alt="Ankole Kraal self-catering camp at Tugam — photo 2"
                 />
               </div>
               <div>
                 <img
                   src="images/accommodation/ankole-kraal/3.jpg"
-                  alt="Ankole Kraal 3"
+                  alt="Ankole Kraal self-catering camp at Tugam — photo 3"
                 />
               </div>
               <div>
                 <img
                   src="images/accommodation/ankole-kraal/4.jpg"
-                  alt="Ankole Kraal 4"
+                  alt="Ankole Kraal self-catering camp at Tugam — photo 4"
                 />
               </div>
               <div>
                 <img
                   src="images/accommodation/ankole-kraal/5.jpg"
-                  alt="Ankole Kraal 5"
+                  alt="Ankole Kraal self-catering camp at Tugam — photo 5"
                 />
               </div>
               <div>
                 <img
                   src="images/accommodation/ankole-kraal/6.jpg"
-                  alt="Ankole Kraal 6"
+                  alt="Ankole Kraal self-catering camp at Tugam — photo 6"
                 />
               </div>
               <div>
                 <img
                   src="images/accommodation/ankole-kraal/7.jpg"
-                  alt="Ankole Kraal 7"
+                  alt="Ankole Kraal self-catering camp at Tugam — photo 7"
                 />
               </div>
               <div>
                 <img
                   src="images/accommodation/ankole-kraal/8.jpg"
-                  alt="Ankole Kraal 8"
+                  alt="Ankole Kraal self-catering camp at Tugam — photo 8"
                 />
               </div>
               <div>
                 <img
                   src="images/accommodation/ankole-kraal/9.jpg"
-                  alt="Ankole Kraal 9"
+                  alt="Ankole Kraal self-catering camp at Tugam — photo 9"
                 />
               </div>
               <div>
                 <img
                   src="images/accommodation/ankole-kraal/10.jpg"
-                  alt="Ankole Kraal 10"
+                  alt="Ankole Kraal self-catering camp at Tugam — photo 10"
                 />
               </div>
               <div>
                 <img
                   src="images/accommodation/ankole-kraal/11.jpg"
-                  alt="Ankole Kraal 11"
+                  alt="Ankole Kraal self-catering camp at Tugam — photo 11"
                 />
               </div>
               <div>
                 <img
                   src="images/accommodation/ankole-kraal/12.jpg"
-                  alt="Ankole Kraal 12"
+                  alt="Ankole Kraal self-catering camp at Tugam — photo 12"
                 />
               </div>
               <div>
                 <img
                   src="images/accommodation/ankole-kraal/13.jpg"
-                  alt="Ankole Kraal 13"
+                  alt="Ankole Kraal self-catering camp at Tugam — photo 13"
                 />
               </div>
               <div>
                 <img
                   src="images/accommodation/ankole-kraal/14.jpg"
-                  alt="Ankole Kraal 14"
+                  alt="Ankole Kraal self-catering camp at Tugam — photo 14"
                 />
               </div>
               <div>
                 <img
                   src="images/accommodation/ankole-kraal/15.jpg"
-                  alt="Ankole Kraal 15"
+                  alt="Ankole Kraal self-catering camp at Tugam — photo 15"
                 />
               </div>
               <div>
                 <img
                   src="images/accommodation/ankole-kraal/16.jpg"
-                  alt="Ankole Kraal 16"
+                  alt="Ankole Kraal self-catering camp at Tugam — photo 16"
                 />
               </div>
               <div>
                 <img
                   src="images/accommodation/ankole-kraal/17.jpg"
-                  alt="Ankole Kraal 17"
+                  alt="Ankole Kraal self-catering camp at Tugam — photo 17"
                 />
               </div>
               <div>
                 <img
                   src="images/accommodation/ankole-kraal/18.jpg"
-                  alt="Ankole Kraal 18"
+                  alt="Ankole Kraal self-catering camp at Tugam — photo 18"
                 />
               </div>
               <div>
                 <img
                   src="images/accommodation/ankole-kraal/19.jpg"
-                  alt="Ankole Kraal 19"
+                  alt="Ankole Kraal self-catering camp at Tugam — photo 19"
                 />
               </div>
               <div>
                 <img
                   src="images/accommodation/ankole-kraal/20.jpg"
-                  alt="Ankole Kraal 20"
+                  alt="Ankole Kraal self-catering camp at Tugam — photo 20"
                 />
               </div>
               <div>
                 <img
                   src="images/accommodation/ankole-kraal/21.jpg"
-                  alt="Ankole Kraal 21"
+                  alt="Ankole Kraal self-catering camp at Tugam — photo 21"
                 />
               </div>
               <div>
                 <img
                   src="images/accommodation/ankole-kraal/22.jpg"
-                  alt="Ankole Kraal 22"
+                  alt="Ankole Kraal self-catering camp at Tugam — photo 22"
                 />
               </div>
               <div>
                 <img
                   src="images/accommodation/ankole-kraal/23.jpg"
-                  alt="Ankole Kraal 23"
+                  alt="Ankole Kraal self-catering camp at Tugam — photo 23"
                 />
               </div>
               <div>
                 <img
                   src="images/accommodation/ankole-kraal/24.jpg"
-                  alt="Ankole Kraal 24"
+                  alt="Ankole Kraal self-catering camp at Tugam — photo 24"
                 />
               </div>
               <div>
                 <img
                   src="images/accommodation/ankole-kraal/25.jpg"
-                  alt="Ankole Kraal 25"
+                  alt="Ankole Kraal self-catering camp at Tugam — photo 25"
                 />
               </div>
               <div>
                 <img
                   src="images/accommodation/ankole-kraal/26.jpg"
-                  alt="Ankole Kraal 26"
+                  alt="Ankole Kraal self-catering camp at Tugam — photo 26"
                 />
               </div>
             </div>
@@ -1012,31 +1110,31 @@
 
             <div class="accom-gallery slick-thumbs" aria-label="Matumi gallery">
               <div>
-                <img src="images/accommodation/matumi/1.jpg" alt="Matumi 1" />
+                <img src="images/accommodation/matumi/1.jpg" alt="Matumi Hunting Camp at Tugam — photo 1" />
               </div>
               <div>
-                <img src="images/accommodation/matumi/2.jpg" alt="Matumi 2" />
+                <img src="images/accommodation/matumi/2.jpg" alt="Matumi Hunting Camp at Tugam — photo 2" />
               </div>
               <div>
-                <img src="images/accommodation/matumi/3.jpg" alt="Matumi 3" />
+                <img src="images/accommodation/matumi/3.jpg" alt="Matumi Hunting Camp at Tugam — photo 3" />
               </div>
               <div>
-                <img src="images/accommodation/matumi/4.jpg" alt="Matumi 4" />
+                <img src="images/accommodation/matumi/4.jpg" alt="Matumi Hunting Camp at Tugam — photo 4" />
               </div>
               <div>
-                <img src="images/accommodation/matumi/5.jpg" alt="Matumi 5" />
+                <img src="images/accommodation/matumi/5.jpg" alt="Matumi Hunting Camp at Tugam — photo 5" />
               </div>
               <div>
-                <img src="images/accommodation/matumi/6.jpg" alt="Matumi 6" />
+                <img src="images/accommodation/matumi/6.jpg" alt="Matumi Hunting Camp at Tugam — photo 6" />
               </div>
               <div>
-                <img src="images/accommodation/matumi/7.jpg" alt="Matumi 7" />
+                <img src="images/accommodation/matumi/7.jpg" alt="Matumi Hunting Camp at Tugam — photo 7" />
               </div>
               <div>
-                <img src="images/accommodation/matumi/8.jpg" alt="Matumi 8" />
+                <img src="images/accommodation/matumi/8.jpg" alt="Matumi Hunting Camp at Tugam — photo 8" />
               </div>
               <div>
-                <img src="images/accommodation/matumi/9.jpg" alt="Matumi 9" />
+                <img src="images/accommodation/matumi/9.jpg" alt="Matumi Hunting Camp at Tugam — photo 9" />
               </div>
             </div>
 
@@ -1156,6 +1254,14 @@
             Monday - Sunday: <span class="text-right">By Appointment</span>
             <br />
             Public Holidays: <span class="text-right">Open</span>
+            <br /><br />
+            <strong>Phone / WhatsApp:</strong><br />
+            <a href="tel:+27664952114">066 495 2114</a>
+            &nbsp;|&nbsp;
+            <a href="https://wa.me/27664952114" target="_blank" rel="noopener">WhatsApp</a>
+            <br /><br />
+            <strong>Email:</strong><br />
+            <a href="mailto:bookings@tugamgamefarm.co.za">bookings@tugamgamefarm.co.za</a>
           </div>
         </div>
         <!-- Col end -->
@@ -1228,6 +1334,17 @@
 </footer>
 <!-- Footer end -->
 
+<!-- #2 — WhatsApp floating action button -->
+<a
+  href="https://wa.me/27664952114"
+  class="whatsapp-fab"
+  target="_blank"
+  rel="noopener"
+  aria-label="Chat with us on WhatsApp"
+>
+  <i class="fab fa-whatsapp"></i>
+</a>
+
 <!-- Javascript Files ================================================== -->
 <!-- initialize jQuery Library -->
 <script src="plugins/jQuery/jquery.min.js"></script>
@@ -1235,13 +1352,29 @@
 <script src="plugins/bootstrap/bootstrap.min.js" defer></script>
 <!-- Slick Carousel -->
 <script src="plugins/slick/slick.min.js"></script>
-<script src="plugins/slick/slick-animation.min.js"></script>
-<!-- Color box -->
-<script src="plugins/colorbox/jquery.colorbox.js"></script>
-<!-- shuffle -->
-<script src="plugins/shuffle/shuffle.min.js" defer></script>
 <!-- Google Map API Key-->
 <!-- Google Map Plugin-->
 <script src="js/script.js"></script>
+
+<!-- #1 — Active nav indicator -->
+<script>
+  (function () {
+    var path = window.location.pathname.replace(/\/$/, "") || "/";
+    var links = document.querySelectorAll(".navbar-nav .nav-item .nav-link");
+    links.forEach(function (link) {
+      var href = link.getAttribute("href") || "";
+      // normalise: strip leading "./" and trailing "/"
+      var normalHref = href.replace(/^\.\//, "").replace(/\/$/, "") || "/";
+      var normalPath =
+        path.split("/").pop() || (path === "/" ? "/" : path.split("/").pop());
+      if (
+        normalHref === normalPath ||
+        (normalHref === "/" && (path === "/" || path === ""))
+      ) {
+        link.closest(".nav-item").classList.add("active");
+      }
+    });
+  })();
+</script>
 <!-- Body inner end -->
 

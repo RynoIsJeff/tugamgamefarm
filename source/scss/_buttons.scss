@@ -24,11 +24,6 @@
   }
 }
 
-.btn-white.btn-primary {
-  background: #f5f8eb;
-  color: #305d26;
-}
-
 .btn-primary {
   background: #305d26;
 }
@@ -38,8 +33,7 @@
 }
 
 .btn-primary:hover,
-.btn-dark:hover,
-.btn-white.btn-primary:hover {
+.btn-dark:hover {
   background: #111;
   color: #f5f8eb;
   &:active,
@@ -47,8 +41,4 @@
     color: #f5f8eb;
     background-color: #111 !important;
   }
-}
-
-.general-btn {
-  margin-top: 50px;
 }
